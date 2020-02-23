@@ -1,0 +1,23 @@
+<nav class="navbar navbar-light bg-light" style="z-index: 2;">
+    <h1 class="col-12 alert alert-primary" style="text-align: center;">LIST BUILDING FOR RENT</h1>
+</nav>
+<ul>
+    <% @buildings.each do |building| %>
+        <li class="booking-card" style="background-image: url('<%= building.image == nil ? 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/fbanijhrol4-annie-spratt-776x951.jpg' : building.image %>')">
+            <div class="book-container">
+                <div class="content">
+                    <%= link_to "Building #{building.id}", building_path(building), :class => "btn", :'data-turbolinks' => false %></button>
+                </div>
+            </div>
+            <div class="informations-container">
+                <h2 class="title"><%= building.location.slice(0..19) + '...' %></h2>
+                <p class="sub-title" style="color: #7d7d7d; font-size: 0.7rem;">This building built in: <%= building.build_year %> | Number of floor: <%= building.floor_number %></p>
+                <div class="more-information">
+                    <p class="disclaimer" ><%= building.description %></p>
+                    <p class="disclaimer" >Location:</p>
+                    <p class="disclaimer"><%= building.location %></p>
+                </div>
+            </div>
+        </li>
+    <% end %>
+</ul>

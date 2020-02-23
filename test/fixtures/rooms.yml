@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rentail_fee: 1
+  manager_fee: 1
+  size: 1.5
+  image: MyText
+  building: one
+  floor: one
+
+two:
+  rentail_fee: 1
+  manager_fee: 1
+  size: 1.5
+  image: MyText
+  building: two
+  floor: two

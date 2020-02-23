@@ -1,0 +1,118 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.css">
+<nav class="navbar navbar-light bg-light" style="z-index: 2;">
+    <h1 class="col-12 alert alert-info" style="text-align: center;">BUILDING <%= @building.id%></h1>
+</nav>
+<div class="demo col-12">
+    <ul id="lightSlider">
+        
+        <li data-thumb="https://assets.m-standard.co.jp/public/properties/00001723/thumb/w750h460/5TvxE5MSSCiSbvJajsRCIkX36Bcb8JN6q9PwATR1.jpeg">
+            <img src="https://assets.m-standard.co.jp/public/properties/00001723/thumb/w750h460/5TvxE5MSSCiSbvJajsRCIkX36Bcb8JN6q9PwATR1.jpeg" />
+        </li>
+        <li data-thumb="https://assets.m-standard.co.jp/public/rooms/00226163/thumb/w750h460/room_226163_d81e38ace4dfb7256a9ee0661397d382.JPG">
+            <img src="https://assets.m-standard.co.jp/public/rooms/00226163/thumb/w750h460/room_226163_d81e38ace4dfb7256a9ee0661397d382.JPG" />
+        </li>
+        <li data-thumb="https://assets.m-standard.co.jp/public/properties/00001836/article_1_1836_1376299575.jpg">
+            <img src="https://assets.m-standard.co.jp/public/properties/00001836/article_1_1836_1376299575.jpg" />
+        </li>
+        <li data-thumb="https://assets.m-standard.co.jp/public/properties/00000060/article_1_60_1414316256.jpg">
+            <img src="https://assets.m-standard.co.jp/public/properties/00000060/article_1_60_1414316256.jpg" />
+        </li>
+        <li data-thumb="https://assets.m-standard.co.jp/public/properties/00007683/article_1_7683_1527383188.jpg">
+            <img src="https://assets.m-standard.co.jp/public/properties/00007683/article_1_7683_1527383188.jpg" />
+        </li>        
+        <li data-thumb="https://assets.m-standard.co.jp/public/rooms/00094653/thumb/w1350h630/room_1_22996.jpg">
+            <img src="https://assets.m-standard.co.jp/public/rooms/00094653/thumb/w1350h630/room_1_22996.jpg" />
+        </li>
+        <li data-thumb="https://assets.m-standard.co.jp/public/rooms/00023109/thumb/w750h460/room_1_23106.jpg">
+            <img src="https://assets.m-standard.co.jp/public/rooms/00023109/thumb/w750h460/room_1_23106.jpg" />
+        </li>
+        
+    </ul>
+</div>
+
+
+<table class="table">
+    <thead class="thead-light">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+        </tr>
+    </tbody>
+</table>
+<p id="notice"><%= notice %></p>
+
+<p>
+    <strong>Image:</strong>
+    <%= @building.image %>
+</p>
+
+<p>
+    <strong>Description:</strong>
+    <%= @building.description %>
+</p>
+
+<p>
+    <strong>Location:</strong>
+    <%= @building.location %>
+</p>
+
+<p>
+    <strong>Build year:</strong>
+    <%= @building.build_year %>
+</p>
+
+<p>
+    <strong>Equiments:</strong>
+    <%= @building.equiments %>
+</p>
+
+<p>
+    <strong>Floor number:</strong>
+    <%= @building.floor_number %>
+</p>
+
+<%= link_to 'Edit', edit_building_path(@building) %> |
+<%= link_to 'Back', buildings_path %>
+<script >
+ $(document).ready(function(){
+     //code of lightslider 
+     $('#lightSlider').lightSlider({
+         gallery: true,
+         item: 1,
+         loop:true,
+         slideMargin: 0,
+         thumbItem: 9
+     });
+ });
+
+</script>
+<style>
+ .lSSlideWrapper {
+
+     height: 300px !important;
+ }
+</style>
