@@ -2,7 +2,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.js"></script>
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.css">
 <nav class="navbar navbar-light bg-light" style="z-index: 2;">
-    <h1 class="col-12 alert alert-info" style="text-align: center;">BUILDING <%= @building.id%></h1>
+    <h1 class="col-12 alert alert-warning" style="text-align: center;">ROOM IN BUILDING <%= @room.building.id%> AT <%= check_floor_number(@room.floor.num_of_floor) %> floor</h1>
 </nav>
 <div class="demo col-12">
     <ul id="lightSlider">
@@ -36,26 +36,37 @@
     <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
     <hr class="my-4">
     <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-    <table class="table col-12">
-        <thead class="thead-light">
+    <table class="table table-hover">
+        
+        <tbody>
             <tr>
-                <th colspan="2">List rooms in Buidling</th>
+                
+                <td class="table-danger">RENT</td>
+                <td><strong style="color: red"><%= @room.rentail_fee %></strong> yen</td>
+                <td class="table-danger">Manager fee</td>
+                <td><strong><%= @room.manager_fee %> yen</td>
+            </tr>
+            <tr>
+                <td class="table-info">Room Detail</td>
+                <td  colspan="3">Living 19.00 tatami
+                    room 7.10 tatami</td>
                 
             </tr>
-        </thead>
-        <tbody>
-            <% @building.rooms.each do |room| %>
-                <tr>
-                    <th scope="row"><img src="https://assets.m-standard.co.jp/public/rooms/00131551/thumb/w150h150/room_1_131551.jpg" class="img-thumbnail" style="max-width: 50px;"></th>
-                    <td><%= check_floor_number(room.floor.num_of_floor) %> floor</td>
-                    <td><strong style="color: red;"><%= room.rentail_fee %></strong> yen ~ <%= room.manager_fee %> yen</td>
-                    <td><%= room.size.round(2) %>m2</td>
-                    <td>
-                        <%= button_to  show_room_path(room), class: "btn btn-info", method: :get, style: "left: 10px;" do%>
-                            View
-                        <% end %></td>
-                </tr>
-            <% end %>
+            <tr>
+                <td class="table-light">Location</td>
+                <td colspan="3"><%=@room.building.location %></td>
+                
+            </tr>
+            <tr>
+                <td class="table-light">Occupied area	</td>
+                <td class="table-light"><%= @room.size.round(2) %> m2</td>
+                <td class="table-light">Location floor	</td>
+                <td class="table-light"><%= @room.floor.num_of_floor %> floors/ <%= @room.building.floor_number %> floors above ground 1 floor below ground</td>
+            </tr>
+            <tr>
+                <td  colspan="2" class="table-light">Date of construction</td>
+                <td colspan="2" class="table-light"><%=@room.building.build_year %></td>
+            </tr>
         </tbody>
     </table>
     <p class="lead">
@@ -64,7 +75,6 @@
         <% end %>
     </p>
 </div>
-
 
 
 <script >

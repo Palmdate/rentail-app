@@ -5,5 +5,5 @@ class Room < ApplicationRecord
   validates :rentail_fee, presence: true
   validates :manager_fee, presence: true
   validates :size, presence: true
-  validates :image, presence: true
+  validates :images, presence: true
 end

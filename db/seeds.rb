@@ -26,9 +26,9 @@ list_image_room = Readability::Document.new(image).prepare_candidates[:elem].xpa
                   )
   
 end
-
+building = 1
 Building.all.pluck(:floor_number).each do |x|
-  building = 1
+  
   x.times.each do |create|
     Floor.create!(num_of_floor: create + 1,
                   building_id: building)
