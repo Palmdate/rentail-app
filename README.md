@@ -48,10 +48,12 @@ Configuration:
 	 update the status of building: is renting, available for rent or new,</br>
 	 update information of building to the website on the easiest way.
 	 
-	 2. The website need has feature search with full options. It means that you can search available </br>
-	 building/rooms depending on location/address, equipments, rentail fee, management fee and size of room.</br>
+	 2. The website need has feature search with full options. It means that you can search</br>
+	 available building/rooms depending on location/address, equipments, rentail fee, </br>
+	 management fee and size of room.
 	 
-	 3. The website can built the social network for renter. They can comments about the qualities, life style,</br
-	 something you need improve or any things that the building has provided it well. </br>
-	 This social will help everyone can evaluate and decide rent  it or not. Add addition, this can </br>
-	 help the owner know the trend of renters.</pre>
+	 3. The website can built the social network for renter. They can comments about the </br>
+	 qualities, life style, something you need improve or any things that the building has</br>
+	 provided it well. 
+	 This social will help everyone can evaluate and decide rent  it or not. Add addition,</br> 
+	 this can help the owner know the trend of renters.</pre>
