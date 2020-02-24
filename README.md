@@ -30,7 +30,7 @@ Configuration:
 
   1.Folder Profile: Building HTML + CSS and responsive for all devices.
   
-     Open file profile.html by link <a>Profile/profile/Profile.html</a> by Google Chrome to show result.
+    Pull folder Profile and open file profile.html in link <a>Profile/pages/profile/Profile.html</a> by Google Chrome to show result.
 		    
   2. matrix_spec.rb: Implement a function for checking the string whether if it's Palindrome or not and unit tests.</br>
   
@@ -42,14 +42,16 @@ Configuration:
 	
 	 There are 3 points that I suggest:
 	 
-	 1. The clients need Admin Page. With this page, the clients can manage all request of rented building as soon as    possible.
- 	 Admin page has some feature: summary the request, sent and receive email from rented building, 
-	 update the status of building: is renting, available for rent or new,
+	 1. The clients need Admin Page. With this page, the clients can manage all request of </br>
+	 rented building as soon as possible.
+ 	 Admin page has some feature: summary the request, sent and receive email from rented building,</br> 
+	 update the status of building: is renting, available for rent or new,</br>
 	 update information of building to the website on the easiest way.
 	 
-	 2. The website need has feature search with full options. It means that you can search available building/rooms 
-	 depending on location/address, equipments, rentail fee, management fee and size of room.
+	 2. The website need has feature search with full options. It means that you can search available </br>
+	 building/rooms depending on location/address, equipments, rentail fee, management fee and size of room.</br>
 	 
-	 3. The website can built the social network for renter. They can comments about the qualities, life style,
-	 something you need improve or any things that the building has provided it well. 
-	 This social will help everyone can evaluate and decide rent  it or not. Add addition, this can help the owner know        	    the trend of renters.</pre>
+	 3. The website can built the social network for renter. They can comments about the qualities, life style,</br
+	 something you need improve or any things that the building has provided it well. </br>
+	 This social will help everyone can evaluate and decide rent  it or not. Add addition, this can </br>
+	 help the owner know the trend of renters.</pre>
